@@ -1,0 +1,47 @@
+{
+  "name": "react-detect-mouse-over",
+  "version": "1.0.0",
+  "description": "Help detect if mouse is over React Component",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cross-env NODE_ENV=production webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielpetrov/react-detect-mouse-over.git"
+  },
+  "keywords": [
+    "React",
+    "mouse",
+    "over",
+    "hoverng",
+    "HOC"
+  ],
+  "author": "Daniel Petrov <danielpetrov222@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danielpetrov/react-detect-mouse-over/issues"
+  },
+  "files": [
+    "dist",
+    "Readme.md"
+  ],
+  "homepage": "https://github.com/danielpetrov/react-detect-mouse-over#readme",
+  "devDependencies": {
+    "babel-core": "^6.17.0",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.5",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-1": "^6.16.0",
+    "cross-env": "^3.1.4",
+    "webpack": "^1.9.4"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}
