@@ -1,10 +1,3 @@
-This is a Higher Order Component that helps to clearly detect if a mouse pointer is over your Component.
-As you may experienced DOM does not fire mouseEnter and mouseLeave properly if you move your mouse fast.
-Instead you should use mouseMove event and calculate if pointer is over you component's DOM rectangle.
-
-Demo usage:
-
-````
 import { MouseHoveringDetection } from './'
 
 import React, { PureComponent as Component, PropTypes } from 'react'
@@ -43,5 +36,3 @@ Demo.propTypes = {
 }
 
 export default MouseHoveringDetection(Demo)
-
-````
