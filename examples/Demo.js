@@ -1,5 +1,5 @@
 import React, { PureComponent as Component, PropTypes } from 'react'
-import { MouseHoveringDetection } from './'
+import { MouseHoveringDetection } from '../src'
 
 class Demo extends Component {
   render() {
