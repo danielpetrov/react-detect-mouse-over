@@ -1,35 +1,27 @@
-import React, { PureComponent as Component, PropTypes } from 'react'
+import React, { PureComponent as Component } from 'react'
 import { MouseHoveringDetection } from '../src'
 
-class Demo extends Component {
+class Hoverable extends Component {
+  style = {
+    height: '4rem',
+    width: '20rem',
+    margin: 'auto',
+    borderRadius: '1rem',
+    backgroundColor: 'gold',
+    textAlign: 'center',
+    fontSize: '3rem',
+    color: 'white'
+  }
+
   render() {
     const { isHoveringOver } = this.props
 
-    if (isHoveringOver) {
-      return (
-        <table>
-          <thead>
-            <tr>
-              <th>Head 1</th>
-              <th>Head 2</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>This is an HTML when mouse is hovering over</td>
-              <td>Over</td>
-            </tr>
-          </tbody>
-        </table>
-      )
-    } else {
-      return <div>Mouse is not hovering over</div>
-    }
+    return (
+      <div style={this.style}>
+        {isHoveringOver ? 'Hovering' : 'Not hovering'}
+      </div>
+    )
   }
 }
 
-Demo.propTypes = {
-  isHoveringOver: PropTypes.bool.isRequired
-}
-
-export default MouseHoveringDetection(Demo)
+export default MouseHoveringDetection(Hoverable)
