@@ -1,4 +1,4 @@
-import React, { PureComponent as Component, PropTypes } from 'react'
+import React, { PureComponent as Component } from 'react'
 import { findDOMNode } from 'react-dom'
 
 const isMouseOverElement = ({ elem, e }) => {
