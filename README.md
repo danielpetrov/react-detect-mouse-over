@@ -1,47 +1,41 @@
-This is a Higher Order Component that helps to clearly detect if a mouse pointer is over your Component.
-As you may experienced DOM does not fire mouseEnter and mouseLeave properly if you move your mouse fast.
-Instead you should use mouseMove event and calculate if pointer is over you component's DOM rectangle.
+# react-detect-mouse-over
 
-Demo usage:
+Detect mouse hovering over [React](https://facebook.github.io/react) component.
 
-````
-import { MouseHoveringDetection } from './'
+## Installation
 
-import React, { PureComponent as Component, PropTypes } from 'react'
+Using [npm](https://www.npmjs.com/):
 
-class Demo extends Component {
-    render() {
-        const { isHoveringOver } = this.props
+    $ npm install --save react-detect-mouse-over
 
-        if (isHoveringOver) {
-            return (
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Head 1</th>
-                            <th>Head 2</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>This is an HTML when mouse is hovering over</td>
-                            <td>Over</td>
-                        </tr>
-                    </tbody>
-                </table>
-            )
-        } else {
-            return (
-                <div>Mouse is not hovering over</div>
-            )
-        }
-    }
+## Usage
+
+````js
+import React, { PureComponent as Component } from 'react'
+import { MouseHoveringDetection } from 'react-detect-mouse-over'
+
+class Hoverable extends Component {
+  style = {
+    height: '4rem',
+    width: '20rem',
+    margin: 'auto',
+    borderRadius: '1rem',
+    backgroundColor: 'gold',
+    textAlign: 'center',
+    fontSize: '3rem',
+    color: 'white'
+  }
+
+  render() {
+    const { isHoveringOver } = this.props
+
+    return (
+      <div style={this.style}>
+        {isHoveringOver ? 'Hovering' : 'Not hovering'}
+      </div>
+    )
+  }
 }
 
-Demo.propTypes = {
-    isHoveringOver: PropTypes.bool.isRequired
-}
-
-export default MouseHoveringDetection(Demo)
-
+export default MouseHoveringDetection(Hoverable)
 ````
