@@ -1,7 +1,7 @@
 {
   "name": "react-detect-mouse-over",
   "version": "1.1.0",
-  "description": "Help detect if mouse is over React Component",
+  "description": "Detect mouse hovering over React component",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -26,7 +26,7 @@
   },
   "files": [
     "dist",
-    "Readme.md"
+    "README.md"
   ],
   "babel": {
     "presets": [
